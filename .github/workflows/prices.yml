@@ -1,0 +1,38 @@
+name: prices
+
+on:
+  schedule:
+    - cron: "7 * * * *"   # every hour at :07 UTC
+  workflow_dispatch:
+  push:
+    paths:
+      - fetch_prices.py
+      - symbols.json
+      - .github/workflows/prices.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prices
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch prices
+        run: python3 fetch_prices.py
+      - name: Commit
+        run: |
+          git config user.name "markets-feed"
+          git config user.email "markets-feed@users.noreply.github.com"
+          git add data/prices.json
+          git commit -m "prices $(date -u +%Y-%m-%dT%H:%MZ)" || exit 0
+          git pull --rebase
+          git push
