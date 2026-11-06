@@ -1,0 +1,33 @@
+{
+  "_note": "Edit this file to add or remove anything the markets agent tracks. Prices only, never holdings.",
+  "crypto": {
+    "BTC": "bitcoin",
+    "POL": "polygon-ecosystem-token",
+    "HBAR": "hedera-hashgraph",
+    "CRV": "curve-dao-token",
+    "NEAR": "near",
+    "ARB": "arbitrum",
+    "FARTCOIN": "fartcoin",
+    "LINK": "chainlink",
+    "AVAX": "avalanche-2",
+    "DOT": "polkadot",
+    "SUI": "sui",
+    "PYTH": "pyth-network",
+    "FET": "fetch-ai"
+  },
+  "stocks": {
+    "QQQ": "QQQ",
+    "SOFI": "SOFI",
+    "MSTR": "MSTR",
+    "NKE": "NKE",
+    "NVDA": "NVDA",
+    "GOOGL": "GOOGL",
+    "AAPL": "AAPL",
+    "RKLB": "RKLB",
+    "SHOP": "SHOP",
+    "JET2": "JET2.L"
+  },
+  "fx": {
+    "GBPUSD": "GBPUSD=X"
+  }
+}
