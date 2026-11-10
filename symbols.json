@@ -25,7 +25,8 @@
     "AAPL": "AAPL",
     "RKLB": "RKLB",
     "SHOP": "SHOP",
-    "JET2": "JET2.L"
+    "JET2": "JET2.L",
+    "POET": "POET"
   },
   "fx": {
     "GBPUSD": "GBPUSD=X"
