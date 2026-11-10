@@ -8,6 +8,7 @@ on:
     paths:
       - fetch_prices.py
       - symbols.json
+      - kick.txt
       - .github/workflows/prices.yml
 
 permissions:
